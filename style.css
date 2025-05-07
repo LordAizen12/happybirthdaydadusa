@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle, #1c1b29, #111);
+    color: white;
+    overflow: hidden;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10vh;
+  }
+  
+  .glow {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: pulse 2s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+    }
+    100% {
+      text-shadow: 0 0 20px #fff, 0 0 40px #ff00ff;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.5em;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .message {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 2s ease;
+  }
+  
+  .cake {
+    width: 200px;
+    animation: float 3s ease-in-out infinite;
+    margin: 20px 0;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  canvas#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .glow {
+      font-size: 2em;
+    }
+  
+    .subtitle {
+      font-size: 1.2em;
+      padding: 0 10px;
+    }
+  
+    .message {
+      font-size: 1em;
+      margin: 20px 10px;
+      padding: 15px;
+    }
+  
+    .cake {
+      width: 150px;
+    }
+  
+    .content {
+      padding-top: 8vh;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .glow {
+      font-size: 1.5em;
+    }
+  
+    .subtitle {
+      font-size: 1em;
+    }
+  
+    .message {
+      font-size: 0.95em;
+    }
+  
+    .cake {
+      width: 120px;
+    }
+  }
+/* Button Style */
+.play-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .play-button:hover {
+    background-color: #ff1c60;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+      
